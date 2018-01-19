@@ -1,0 +1,422 @@
+@@include('templates/_head.html', {
+	"title": "Rabotut | Главная"
+})
+@@include('templates/_header.html', {
+	"menu_item": "index"
+})
+				<div class="slider js-slider-main">
+					<div class="js-slider-main__item slide1">
+						<div class="js-slider-main__thumb" style="background-image: url('img/slide1.jpg')"></div>
+						<div class="container">
+							<p class="js-slider-main__title">Есть вопросы?</p>
+							<p class="js-slider-main__description">Позвони на горячую линию для сотрудников. <br>Наш руководитель и сотрудники контакт-центра <br>ответят на твои вопросы и решат проблемы</p>
+							<img src="img/slide1-h.png" alt="" class="js-slider-main__human">
+
+							<div class="contact-info">
+								<p class="name">Елена Асташенко</p>
+								<p class="who">Менеджер</p>
+								<a href="tel:325(48)214-55-44" class="tel">+325 (48) 214-55-44</a>
+							</div>
+						</div>
+					</div>
+					<div class="js-slider-main__item slide1">
+						<div class="js-slider-main__thumb" style="background-image: url('img/slide1.jpg')"></div>
+						<div class="container">
+							<p class="js-slider-main__title">Есть вопросы?</p>
+							<p class="js-slider-main__description">Позвони на горячую линию для сотрудников. <br>Наш руководитель и сотрудники контакт-центра <br>ответят на твои вопросы и решат проблемы</p>
+							<img src="img/slide1-h.png" alt="" class="js-slider-main__human">
+
+							<div class="contact-info">
+								<p class="name">Елена Асташенко</p>
+								<p class="who">Менеджер</p>
+								<a href="tel:325(48)214-55-44" class="tel">+325 (48) 214-55-44</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="filter">
+					<div class="container">
+						<div class="filter__container">
+							<div class="filter__form_group">
+								<input type="text" placeholder="Ваше имя" class="filter__form_control">
+							</div>
+							<div class="filter__form_group">
+								<select class="filter__form_control select" data-placeholder="Тип занятости">
+									<option value=""></option>
+									<option value="">Полный рабочий день</option>
+									<option value="">Удаленная работа</option>
+									<option value="">Ночная смена</option>
+								</select>
+							</div>
+							<div class="filter__form_group">
+								<input type="tel" placeholder="Ваш телефон" class="filter__form_control phone">
+							</div>
+							<div class="filter__form_group filter__form_group_btn">
+								<button class="btn btn-default">Записаться на&nbsp;собеседование</button>
+							</div>
+							<p class="filter__message">Отправляя форму , вы соглашаетесь <br>с <a href="#">Политикой конфиденциальности</a></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="search-vacancies">
+					<div class="container">
+						<div class="search-vacancies__form">
+							<input type="text" placeholder="Поиск по вакансиям" autofocus>
+							<button><svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg></button>
+						</div>
+						<div class="search-vacancies__list">
+							<div class="search-vacancies__item">
+								<div class="search-vacancies__item_header">
+									<span class="number">128</span>
+									<span class="text">вакансий</span>
+								</div>
+								<div class="search-vacancies__item_footer">
+									<span class="name">Менеджер по продажам</span>
+									<span class="price">
+										от 15 000
+										<svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+									</span>
+								</div>
+								<div class="search-vacancies__item_hover">
+									<span class="name">Менеджер по продажам</span>
+									<span class="number">128</span>
+									<span class="text">вакансий</span>
+									<button class="btn btn-default" data-toggle="modal" data-target="#respond_job">Посмотреть вакансии</button>
+								</div>
+							</div>
+							<div class="search-vacancies__item">
+								<div class="search-vacancies__item_header">
+									<span class="number">189</span>
+									<span class="text">вакансий</span>
+								</div>
+								<div class="search-vacancies__item_footer">
+									<span class="name">Водитель</span>
+									<span class="price">
+										от 25 000
+										<svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+									</span>
+								</div>
+								<div class="search-vacancies__item_hover">
+									<span class="name">Водитель</span>
+									<span class="number">189</span>
+									<span class="text">вакансий</span>
+									<button class="btn btn-default" data-toggle="modal" data-target="#respond_job">Посмотреть вакансии</button>
+								</div>
+							</div>
+							<div class="search-vacancies__item">
+								<div class="search-vacancies__item_header">
+									<span class="number">12</span>
+									<span class="text">вакансий</span>
+								</div>
+								<div class="search-vacancies__item_footer">
+									<span class="name">Генеральный директор</span>
+									<span class="price">
+										от 25 000
+										<svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+									</span>
+								</div>
+								<div class="search-vacancies__item_hover">
+									<span class="name">Генеральный директор</span>
+									<span class="number">12</span>
+									<span class="text">вакансий</span>
+									<button class="btn btn-default" data-toggle="modal" data-target="#respond_job">Посмотреть вакансии</button>
+								</div>
+							</div>
+							<div class="search-vacancies__item">
+								<div class="search-vacancies__item_header">
+									<span class="number">58</span>
+									<span class="text">вакансий</span>
+								</div>
+								<div class="search-vacancies__item_footer">
+									<span class="name">Уборщик</span>
+									<span class="price">
+										от 25 000
+										<svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+									</span>
+								</div>
+								<div class="search-vacancies__item_hover">
+									<span class="name">Уборщик</span>
+									<span class="number">58</span>
+									<span class="text">вакансий</span>
+									<button class="btn btn-default" data-toggle="modal" data-target="#respond_job">Посмотреть вакансии</button>
+								</div>
+							</div>
+							<div class="search-vacancies__item">
+								<div class="search-vacancies__item_header">
+									<span class="number">18</span>
+									<span class="text">вакансий</span>
+								</div>
+								<div class="search-vacancies__item_footer">
+									<span class="name">Программист Java</span>
+									<span class="price">
+										от 25 000
+										<svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+									</span>
+								</div>
+								<div class="search-vacancies__item_hover">
+									<span class="name">Программист Java</span>
+									<span class="number">18</span>
+									<span class="text">вакансий</span>
+									<button class="btn btn-default" data-toggle="modal" data-target="#respond_job">Посмотреть вакансии</button>
+								</div>
+							</div>
+							<div class="search-vacancies__item">
+								<div class="search-vacancies__item_header">
+									<span class="number">189</span>
+									<span class="text">вакансий</span>
+								</div>
+								<div class="search-vacancies__item_footer">
+									<span class="name">Водитель</span>
+									<span class="price">
+										от 25 000
+										<svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+									</span>
+								</div>
+								<div class="search-vacancies__item_hover">
+									<span class="name">Водитель</span>
+									<span class="number">189</span>
+									<span class="text">вакансий</span>
+									<button class="btn btn-default" data-toggle="modal" data-target="#respond_job">Посмотреть вакансии</button>
+								</div>
+							</div>
+							<div class="search-vacancies__item">
+								<div class="search-vacancies__item_header">
+									<span class="number">12</span>
+									<span class="text">вакансий</span>
+								</div>
+								<div class="search-vacancies__item_footer">
+									<span class="name">Генеральный директор</span>
+									<span class="price">
+										от 25 000
+										<svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+									</span>
+								</div>
+								<div class="search-vacancies__item_hover">
+									<span class="name">Генеральный директор</span>
+									<span class="number">12</span>
+									<span class="text">вакансий</span>
+									<button class="btn btn-default" data-toggle="modal" data-target="#respond_job">Посмотреть вакансии</button>
+								</div>
+							</div>
+							<div class="search-vacancies__item">
+								<div class="search-vacancies__item_header">
+									<span class="number">58</span>
+									<span class="text">вакансий</span>
+								</div>
+								<div class="search-vacancies__item_footer">
+									<span class="name">Уборщик</span>
+									<span class="price">
+										от 25 000
+										<svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+									</span>
+								</div>
+								<div class="search-vacancies__item_hover">
+									<span class="name">Уборщик</span>
+									<span class="number">58</span>
+									<span class="text">вакансий</span>
+									<button class="btn btn-default" data-toggle="modal" data-target="#respond_job">Посмотреть вакансии</button>
+								</div>
+							</div>
+							<div class="search-vacancies__item">
+								<div class="search-vacancies__item_header">
+									<span class="number">18</span>
+									<span class="text">вакансий</span>
+								</div>
+								<div class="search-vacancies__item_footer">
+									<span class="name">Программист Java</span>
+									<span class="price">
+										от 25 000
+										<svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+									</span>
+								</div>
+								<div class="search-vacancies__item_hover">
+									<span class="name">Программист Java</span>
+									<span class="number">18</span>
+									<span class="text">вакансий</span>
+									<button class="btn btn-default" data-toggle="modal" data-target="#respond_job">Посмотреть вакансии</button>
+								</div>
+							</div>
+							<a href="#" class="search-vacancies__item _more">
+								Больше вакансий
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="widget">
+					<div class="container">
+						<p class="widget-title">
+							Работут —&nbsp;завтра на&nbsp;работу
+							<span class="widget-subtitle">Быстрое трудоустройство в&nbsp;надежную компанию</span>
+						</p>
+
+						<div class="advantage-list">
+							<div class="advantage-item">
+								<div class="advantage-item__thumb"><img src="img/svg/icon1.svg" alt=""></div>
+								<div class="advantage-item__text">Большой выбор вакансий</div>
+							</div>
+							<div class="advantage-item">
+								<div class="advantage-item__thumb"><img src="img/svg/icon2.svg" alt=""></div>
+								<div class="advantage-item__text">Работа рядом с&nbsp;домом</div>
+							</div>
+							<div class="advantage-item">
+								<div class="advantage-item__thumb"><img src="img/svg/icon3.svg" alt=""></div>
+								<div class="advantage-item__text">Возможность гибкого&nbsp;графика</div>
+							</div>
+							<div class="advantage-item">
+								<div class="advantage-item__thumb"><img src="img/svg/icon4.svg" alt=""></div>
+								<div class="advantage-item__text">Надежные работодатели</div>
+							</div>
+							<div class="advantage-item">
+								<div class="advantage-item__thumb"><img src="img/svg/icon5.svg" alt=""></div>
+								<div class="advantage-item__text">Стабильная заработная плата</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="widget widget-interview">
+					<div class="container">
+						<p class="widget-title">От заботы до&nbsp;работы <br>всего ничего</p>
+
+						<ul class="widget-interview__steps">
+							<li><a href="#">Оставьте заявку</a> <br>на сайте</li>
+							<li>Наш менеджер <strong>перезвонит <br>и подберет</strong> подходящую <br>вакансию</li>
+							<li><strong>Предложит день выхода</strong> <br>и пригласит для оформления <br>договора</li>
+						</ul>
+						<a href="#" class="btn btn-default">Записаться на собеседование</a>
+					</div>
+				</div>
+
+				<div class="counter-block">
+					<div class="counter">
+						<div class="container">
+							<div class="counter-list">
+								<div class="counter-head">
+									Вышли <br class="visible-xs"> на работу <br class="visible-lg visible-xs">вместе <br class="visible-md visible-sm">с&nbsp;<img src="img/svg/logo-inline.svg" alt="" class="icon">
+								</div>
+								<div class="counter-item" style="background-color: #3069ae">
+									<span class="number" data-val="45">45</span>
+									<span class="text">сегодня</span>
+								</div>
+								<div class="counter-item" style="background-color: #285d9d">
+									<span class="number" data-val="120">120</span>
+									<span class="text">за неделю</span>
+								</div>
+								<div class="counter-item" style="background-color: #215089">
+									<span class="number" data-val="2451">2541</span>
+									<span class="text">за месяц</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="widget widget-reviews">
+					<div class="container">
+						<div class="slider js-slider-reviews">
+							<div class="js-slider-reviews__item">
+								<div class="js-slider-reviews__content">
+									<div class="js-slider-reviews__thumb">
+										<img src="img/review1.png" alt="">
+										<p class="name">Сергей</p>
+										<p class="age">34 года</p>
+									</div>
+									<div class="js-slider-reviews__info">
+										<div class="js-slider-reviews__tools">
+											<span class="job">Кассир</span>
+											<span class="date">Нашли работу за 2 дня</span>
+										</div>
+										<p>Когда уволили с прошлой работы долго метался и не знал куда пойти, нашел в интернете сайт Работут. Через два дня уже работал грузчиком на складе. Платят немного зато думать особо не надо. Сейчас хочу вахтовым методом устроится комплектовщиком на склад за городом.  Там платят больше, жилье и обеды предосталяют.</p>
+									</div>
+								</div>
+							</div>
+							<div class="js-slider-reviews__item">
+								<div class="js-slider-reviews__content">
+									<div class="js-slider-reviews__thumb">
+										<img src="img/review1.png" alt="">
+										<p class="name">Сергей</p>
+										<p class="age">34 года</p>
+									</div>
+									<div class="js-slider-reviews__info">
+										<div class="js-slider-reviews__tools">
+											<span class="job">Кассир</span>
+											<span class="date">Нашли работу за 2 дня</span>
+										</div>
+										<p>Когда уволили с прошлой работы долго метался и не знал куда пойти, нашел в интернете сайт Работут. Через два дня уже работал грузчиком на складе. Платят немного зато думать особо не надо. Сейчас хочу вахтовым методом устроится комплектовщиком на склад за городом.  Там платят больше, жилье и обеды предосталяют.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="widget widget-employees">
+					<div class="container">
+						<div class="widget-employees__left">
+							<span class="widget-title">Где работают <br>наши сотрудники</span>
+							<p><strong>Мы — федеральный кадровый центр!</strong> <br>Наши мерчандайзеры, кассиры, продавцы, счетчики — ревизоры, работники торгового зала, повара, сборщики, фасовщики и не только, уже трудятся в российских и международных торговых и производственных компаниях во всех регионах страны.</p>
+							<a href="#" class="btn btn-default _huge">О компании</a>
+						</div>
+						<div class="widget-employees__right">
+							<div class="slider js-slider-employees">
+								<div class="js-slider-employees__item">
+									<div class="js-slider-employees__list">
+										<span class="js-slider-employees__area"><img src="img/emp1.png" alt=""></span>
+										<span class="js-slider-employees__area _huge"><img src="img/emp2.png" alt=""></span>
+										<span class="js-slider-employees__area"><img src="img/emp3.png" alt=""></span>
+
+										<span class="js-slider-employees__area _huge"><img src="img/emp4.png" alt=""></span>
+										<span class="js-slider-employees__area"><img src="img/emp5.png" alt=""></span>
+										<span class="js-slider-employees__area"><img src="img/emp6.png" alt=""></span>
+
+										<span class="js-slider-employees__area"><img src="img/emp7.png" alt=""></span>
+										<span class="js-slider-employees__area"><img src="img/emp8.png" alt=""></span>
+										<span class="js-slider-employees__area _huge"><img src="img/emp9.png" alt=""></span>
+									</div>
+								</div>
+								<div class="js-slider-employees__item">
+									<div class="js-slider-employees__list">
+										<span class="js-slider-employees__area"><img src="img/emp1.png" alt=""></span>
+										<span class="js-slider-employees__area _huge"><img src="img/emp2.png" alt=""></span>
+										<span class="js-slider-employees__area"><img src="img/emp3.png" alt=""></span>
+
+										<span class="js-slider-employees__area _huge"><img src="img/emp4.png" alt=""></span>
+										<span class="js-slider-employees__area"><img src="img/emp5.png" alt=""></span>
+										<span class="js-slider-employees__area"><img src="img/emp6.png" alt=""></span>
+
+										<span class="js-slider-employees__area"><img src="img/emp7.png" alt=""></span>
+										<span class="js-slider-employees__area"><img src="img/emp8.png" alt=""></span>
+										<span class="js-slider-employees__area _huge"><img src="img/emp9.png" alt=""></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="help-block">
+							<h3 class="help-title">Персональная помощь</h3>
+
+							<div class="help-list">
+								<div class="help-item chat">
+									<h4 class="help-item__title">Онлайн-консультант</h4>
+									<p>Появились вопросы, на которые нужно оперативно ответить? Наш консультант уже ждет вас онлайн</p>
+									<a href="#" class="link">Начать онлайн-чат</a>
+								</div>
+								<div class="help-item line">
+									<h4 class="help-item__title">Горячая линия</h4>
+									<p>Задайте волнующий вас вопрос</p>
+									<a href="tel:88005552888" class="tel">8 800 555 28 88</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+@@include('templates/_footer.html')
+@@include('templates/_modals.html', {
+	"call_me": "true",
+	"respond_job": "true"
+})
+@@include('templates/_scripts_styles.html')
+@@include('templates/_end.html')

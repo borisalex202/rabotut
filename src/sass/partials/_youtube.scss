@@ -1,0 +1,103 @@
+.youtube {
+  &-block {
+    position: relative;
+    background: #7b7b7b;
+    min-height: 635px;
+
+    &.active {
+      .youtube {
+        &-thumb {
+          pointer-events: none;
+          @include opacity(0);
+        }
+        &-content {
+          pointer-events: none;
+          @include opacity(0);
+        }
+        &-video {
+          pointer-events: all;
+          @include opacity(1);
+        }
+      }
+    }
+    @media (max-width: $screen-xs-max) {
+      min-height: 480px;
+    }
+  }
+  &-thumb {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    @include opacity(.3);
+    @include transition($transition);
+  }
+  &-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 4;
+    padding: 0 40px;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+    @include transition($transition);
+
+    &__inner {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &-play {
+    max-width: 71px;
+    max-height: 71px;
+    margin: 0 auto 30px;
+  }
+  &-title {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 28px;
+    }
+  }
+  &-description {
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.549);
+    line-height: 1.273;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 18px;
+    }
+  }
+  &-video {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+    @include opacity(0);
+    @include transition($transition);
+
+    &__iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.js-play-video {
+  cursor: pointer;
+}

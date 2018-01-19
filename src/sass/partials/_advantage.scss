@@ -1,0 +1,40 @@
+.advantage {
+  &-list {
+    @include flexbox();
+    @include flex-wrap(wrap);
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: -60px;
+      @include justify-content(center)
+    }
+  }
+  &-item {
+    width: 20%;
+    padding: 0 20px;
+    text-align: center;
+
+    &__thumb {
+      min-height: 85px;
+      margin-bottom: 20px;
+      @include flexbox();
+      @include flex-wrap(wrap);
+      @include align-items(center);
+      @include justify-content(center);
+    }
+    &__text {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgb(0, 0, 0);
+      line-height: 1.4;
+    }
+    @media (max-width: $screen-sm-max) {
+      width: 33.3333%;
+      margin-top: 60px;
+    }
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      padding: 0;
+      margin-top: 60px;
+    }
+  }
+}

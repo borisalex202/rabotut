@@ -1,0 +1,50 @@
+@@include('templates/_head.html', {
+	"title": "Rabotut | Наши офисы"
+})
+@@include('templates/_header.html', {
+	"menu_item": "offices"
+})
+				<div class="widget widget-standard widget-office">
+					<div class="container">
+						<ul class="breadcrumbs">
+							<li class="back"><a href="index.html">Назад</a></li>
+							<li><a href="index.html">Главная</a></li>
+							<li>Наши офисы</li>
+						</ul>
+						<h1 class="heading">
+							Наши офисы в
+							<span class="office-choice">
+								<span class="office-choice__current">Москве</span>
+								<span class="office-choice__list">
+									<span class="office-choice__close">
+										<svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
+									</span>
+									<span class="office-choice__item active" data-coords=[55.771574,37.613856]>Москва</span>
+									<span class="office-choice__item" data-coords=[59.9175433,30.2949778]>Санкт-Петербург</span>
+									<span class="office-choice__item" data-coords=[53.2610313,50.0579967]>Самара</span>
+									<span class="office-choice__item" data-coords=[57.6525648,39.7244371]>Ярославль</span>
+									<span class="office-choice__item" data-coords=[54.7116885,20.394491]>Калининград</span>
+									<span class="office-choice__item" data-coords=[45.0536479,38.9460167]>Краснодар</span>
+									<span class="office-choice__item" data-coords=[57.1741595,65.5019606]>Тюмень</span>
+									<span class="office-choice__item" data-coords=[54.8088967,55.8807934]>Уфа</span>
+								</span>
+							</span>
+						</h1>
+					</div>
+				</div>
+				<div id="office-map" class="office-map"></div>
+				<div class="widget widget-office-list">
+					<div class="container">
+						<ul class="office-list">
+
+						</ul>
+					</div>
+				</div>
+@@include('templates/_footer.html')
+@@include('templates/_modals.html', {
+	"call_me": "true"
+})
+@@include('templates/_scripts_styles.html')
+				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+				<script src="js/map.js"></script>
+@@include('templates/_end.html')

@@ -1,0 +1,103 @@
+@@include('templates/_head.html', {
+	"title": "Rabotut | Вопрос и ответ"
+})
+@@include('templates/_header.html', {
+	"menu_item": "faq"
+})
+				<div class="widget widget-faq">
+					<div class="container">
+						<ul class="breadcrumbs">
+							<li class="back"><a href="index.html">Назад</a></li>
+							<li><a href="index.html">Главная</a></li>
+							<li>Вопрос и ответ</li>
+						</ul>
+						<h1 class="heading">Вопрос и ответ</h1>
+
+						<div class="faq-list">
+							<div class="faq-item">
+								<div class="faq-item__title">Что за&nbsp;компания Работут?</div>
+								<div class="faq-item__content">
+									<p>Мы&nbsp;&mdash; Федеральный кадровый центр. Стратегический партнер Компании Лидер Тим по&nbsp;подбору и&nbsp;развитию и&nbsp;персонала. Наша работа заключается в&nbsp;том, что&nbsp;бы найти вам подходящую вакансию!</p>
+								</div>
+							</div>
+							<div class="faq-item">
+								<div class="faq-item__title">Как вы&nbsp;оформляете?</div>
+								<div class="faq-item__content">
+									<p>У&nbsp;нас есть различные виды оформления, в&nbsp;том числе оформление по&nbsp;гражданско-правовому договору. Более подробно Вам скажут на&nbsp;собеседовании</p>
+								</div>
+							</div>
+							<div class="faq-item">
+								<div class="faq-item__title">Как выплачивается зарплата?</div>
+								<div class="faq-item__content">
+									<p>Оплата будет производиться по&nbsp;безналичному расчету, на&nbsp;банковскую карту, выплаты от&nbsp;1&nbsp;до&nbsp;4&nbsp;раз в&nbsp;месяц</p>
+								</div>
+							</div>
+							<div class="faq-item">
+								<div class="faq-item__title">А&nbsp;работа в&nbsp;конкретном объекте/магазине?</div>
+								<div class="faq-item__content">
+									<p>Работа на&nbsp;различных объектах по&nbsp;городу, в&nbsp;зависимости от&nbsp;ваших потребностей. Стараемся подбирать объекты ближе к&nbsp;Вам и&nbsp;по&nbsp;подходящей к&nbsp;Вам вакансии.</p>
+								</div>
+							</div>
+							<div class="faq-item">
+								<div class="faq-item__title">Скажите, Вы&nbsp;агентство? Услуги платные?</div>
+								<div class="faq-item__content">
+									<p>Нет. Мы&nbsp;федеральный кадровый центр, мы&nbsp;не&nbsp;берем оплату за&nbsp;трудоустройство.</p>
+								</div>
+							</div>
+							<div class="faq-item">
+								<div class="faq-item__title">А&nbsp;какие вакансии у&nbsp;Вас есть?</div>
+								<div class="faq-item__content">
+									<p>Имеются вакансии на&nbsp;складах и&nbsp;в&nbsp;торговых точках, примеры: фасовщик, упаковщик, грузчик, сканеровщик (склад), мерчандайзер, кассир, работник торгового зала (ТТ)</p>
+								</div>
+							</div>
+							<div class="faq-item">
+								<div class="faq-item__title">Что входит в&nbsp;обязанности работника торгового зала?</div>
+								<div class="faq-item__content">
+									<p>Работа в&nbsp;торговом зале. Выкладка товара на&nbsp;витрины /полки магазина. Поддержание витрин/полок в&nbsp;предпродажном состоянии. Опыт работы не&nbsp;обязателен, проводится инструктаж на&nbsp;рабочем месте с&nbsp;пояснением работы</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="widget widget-feedback">
+					<div class="container feedback">
+						<div class="feedback-container">
+							<div class="feedback-left">
+								<p class="feedback-title">Не нашли нужного ответа <br>на свой вопрос?</p>
+								<p class="feedback-desc">Вы можете задать его онлайн или уточнить <br>у наших операторов по номеру</p>
+								<a href="tel:880022250-60" class="feedback-tel">
+									<svg class="icon icon-tel"><use xlink:href="#icon-tel"></use></svg>
+									8 800 222 50-60
+								</a>
+							</div>
+							<div class="feedback-right">
+								<form action="faq.html">
+									<div class="row">
+										<div class="col-sm-6 col-xs-12 form-group">
+											<input type="text" class="form-control" placeholder="Ваше имя *">
+										</div>
+										<div class="col-sm-6 col-xs-12 form-group">
+											<input type="text" class="form-control" placeholder="Телефон *">
+										</div>
+									</div>
+									<div class="form-group">
+										<textarea rows="2" class="form-control" placeholder="Комментарий"></textarea>
+									</div>
+									<label class="checkbox _block">
+										<input type="checkbox" checked>
+										<span class="icon"></span>
+										<span class="text">Согласен с <a href="img/rabotut_policy.pdf" target="_blank">условиями</a> использования персональных данных</span>
+									</label>
+									<button class="btn btn-default _huge">Отправить</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+@@include('templates/_footer.html')
+@@include('templates/_modals.html', {
+	"call_me": "true",
+	"respond_job": "true"
+})
+@@include('templates/_scripts_styles.html')
+@@include('templates/_end.html')

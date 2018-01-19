@@ -1,0 +1,103 @@
+/* Fonts */
+$font-family-base:             'Ubuntu', sans-serif;
+$font-family-primary:          'Open Sans', 'Ubuntu', sans-serif;
+$font-size:                    16px;
+
+/* Animation */
+$transition:                   all .3s ease;
+
+/* Main */
+$shadow:                       0px 25px 117px 0px rgba(206, 206, 206, 0.77);
+
+//  Colors
+$colors: (
+        default:               #23548f,
+        primary:               #e61849,
+        secondary:             #40bfe8,
+        text-gray:             #949494,
+        border:                #d9e0e0,
+        borderInput:           #dee7e7,
+        linkDisabled:          #949494,
+        footer:                #f4fbfb,
+        counter:               #3369AA,
+
+        btnDefault:            #E41F4D,
+        btnDefaultHover:       #F61E50,
+
+        btnPrimary:            #1b358a,
+        btnPrimaryHover:       lighten(#1b358a, 10%)
+);
+
+//  Size
+$size: (
+        h1:                    50px,
+        h2:                    40px,
+        h3:                    32px,
+        h4:                    26px,
+        h5:                    22px,
+        h6:                    18px,
+        p:                     16px,
+        a:                     16px
+);
+
+//  Background
+$bg-colors: (
+        default:               #23548f,
+        primary:               #e61849,
+        secondary:             #40bfe8,
+        squeeze:               #F4FBFB,
+        gray:                  #f4fbfb,
+        gray-light:            #F6F6F6
+);
+
+// Bootstrap
+
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width);
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet;
+
+// Medium screen / desktop
+$container-desktop:            (990px + $grid-gutter-width);
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1240px + $grid-gutter-width);
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop;
+
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  1022px;
+$screen-md-min:              $screen-md;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1300px;
+$screen-lg-min:              $screen-lg;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);

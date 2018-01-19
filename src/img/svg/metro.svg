@@ -1,0 +1,8 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="17px" height="17px">
+    <path fill-rule="evenodd"  fill="rgb(96, 188, 246)"
+          d="M8.500,-0.000 C13.194,-0.000 17.000,3.806 17.000,8.500 C17.000,13.194 13.194,17.000 8.500,17.000 C3.806,17.000 -0.000,13.194 -0.000,8.500 C-0.000,3.806 3.806,-0.000 8.500,-0.000 Z"/>
+    <text font-family="Ubuntu" fill="rgb(255, 255, 255)" transform="matrix( 0.80707070707071, 0, 0, 0.70833333333333,4.86818181818182, 10.8333333333333)" font-weight="bold" font-size="11px">&#1052;</text>
+</svg>

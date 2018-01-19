@@ -1,0 +1,217 @@
+.form {
+  &-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  &-control {
+    width: 100%;
+    min-height: 53px;
+    line-height: 53px;
+    color: #000;
+    padding: 0 18px;
+    border-radius: 5px;
+    border: 1px solid map_get($colors, borderInput);
+    @include transition($transition);
+    @include placeholder {
+      font-size: 15px;
+      color: rgb(0, 0, 0);
+    }
+
+    &:focus {
+      border-color: #1A8BFB;
+    }
+    &._error {
+      background-color: #F4967D;
+      color: #ce0000;
+      border-color: #EA202C;
+
+      @include placeholder {
+        color: #ce0000;
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      font-size: 18px;
+
+      @include placeholder {
+        font-size: 18px;
+      }
+    }
+    @media (max-width: $screen-xs-max) {
+      height: 55px;
+      line-height: 55px;
+    }
+  }
+}
+.select {
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    z-index: 10;
+    border-bottom: 1px solid map_get($colors, borderInput);
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  &.opened {
+    .jq-selectbox {
+      &__trigger {
+        &:before {
+          @include transform(translate(0, -50%) rotate(180deg));
+        }
+      }
+    }
+  }
+  select {
+    pointer-events: none;
+  }
+  .jq-selectbox {
+    &__dropdown {
+      background-color: #fff;
+      border: 1px solid map_get($colors, borderInput);
+      width: calc(100% + 2px) !important;
+      border-radius: 0 0 5px 5px;
+      z-index: 0;
+      top: calc(100% - 3px) !important;
+      left: -1px !important;
+      right: -1px !important;
+
+      ul {
+        padding: 10px 0;
+        background-color: #fff;
+
+        li {
+          padding: 0 18px;
+          height: 45px;
+          line-height: 16px;
+          white-space: normal;
+          cursor: pointer;
+          @include transition($transition);
+          @include flexbox();
+          @include flex-wrap(wrap);
+          @include align-items(center);
+
+          &:hover,
+          &.selected {
+            color: map_get($colors, secondary);
+          }
+          &.selected {
+            cursor: default;
+          }
+        }
+      }
+    }
+    &__select {
+      &-text {
+        max-width: 85%;
+        font-size: 15px;
+      }
+    }
+    &__trigger {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        border-top: 6px solid #000;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        @include transition($transition);
+        @include transform(translate(0, -50%));
+      }
+    }
+  }
+}
+.checkbox {
+  position: relative;
+  padding-left: 38px;
+  display: inline-block;
+  margin: 0 0 22px;
+  cursor: pointer;
+  text-align: left;
+
+  &._block {
+    display: block;
+  }
+  input {
+    position: absolute;
+    pointer-events: none;
+    @include opacity(0);
+
+    &:checked ~ .icon:before {
+      @include opacity(1);
+    }
+  }
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid map_get($colors, borderInput);
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: url("../img/svg/icon-check.svg") center 4px no-repeat;
+      background-size: 14px;
+      @include transition($transition);
+      @include opacity(0);
+    }
+    @media (max-width: $screen-sm-max) {
+      top: -3px;
+      width: 30px;
+      height: 30px;
+
+      &:before {
+        background-size: 19px;
+      }
+    }
+  }
+  .text {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 300;
+
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+      text-decoration: underline;
+      color: map_get($colors, secondary);
+
+      &:hover {
+        text-decoration: none;
+        color: map_get($colors, primary);
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  @media (max-width: $screen-sm-max) {
+    padding-left: 54px;
+  }
+}
+textarea.form-control {
+  @media (max-width: $screen-xs-max) {
+    height: auto;
+  }
+}

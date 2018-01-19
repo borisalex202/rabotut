@@ -1,0 +1,598 @@
+.search {
+  &-vacancies {
+    background-color: map_get($bg-colors, gray);
+    padding: 65px 0 100px;
+
+    &__form {
+      position: relative;
+      margin-bottom: 65px;
+
+      input {
+        width: 100%;
+        height: 70px;
+        line-height: 1.2;
+        color: #000;
+        font-size: 25px;
+        padding: 0 50px;
+        border-radius: 5px;
+        border: 1px solid map_get($colors, borderInput);
+        @include transition($transition);
+        @include box-shadow(0px 9px 65px 0px rgba(211, 220, 220, 0.31));
+        @include placeholder {
+          font-size: 25px;
+          color: #8a8a8a;
+        }
+        @media (max-width: $screen-sm-max) {
+          padding: 0 50px 0 30px;
+        }
+        @media (max-width: $screen-xs-max) {
+          font-size: 18px;
+          padding: 0 50px 0 20px;
+          @include placeholder {
+            line-height: 0.8;
+          }
+        }
+      }
+      button {
+        margin: 2px 0 0;
+        padding: 0;
+        background-color: transparent;
+        position: absolute;
+        border: 0;
+        top: 50%;
+        right: 40px;
+        @include translate(0, -50%);
+
+        @media (max-width: $screen-sm-max) {
+          right: 30px;
+        }
+        @media (max-width: $screen-xs-max) {
+          right: 20px;
+
+          .icon {
+            max-width: 20px;
+            max-height: 20px;
+          }
+        }
+      }
+      @media (max-width: $screen-sm-max) {
+        margin-bottom: 50px;
+      }
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 35px;
+      }
+    }
+    &__list {
+      margin: -25px -12.5px 0;
+      @include flexbox();
+      @include flex-wrap(wrap);
+    }
+    &__item {
+      margin: 25px 12.5px 0;
+      width: calc(20% - 25px);
+      border: 1px solid map_get($colors, borderInput);
+      border-radius: 6px;
+      overflow: hidden;
+      min-height: 245px;
+      background-color: rgb(255, 255, 255);
+      position: relative;
+      @include box-shadow(0px 3px 35px 0px rgba(106, 119, 119, 0.18));
+      @include transition($transition);
+
+      &._more {
+        background-color: map_get($colors, primary);
+        color: #fff;
+        font-size: 22px;
+        font-weight: 500;
+        padding: 20px 55px 20px 35px;
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include align-items(center);
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 14px;
+          height: 17px;
+          top: 50%;
+          right: 30px;
+          background: url('../img/svg/arrow-v.svg');
+          background-size: cover;
+          @include transition($transition);
+          @include translate(0, -50%);
+        }
+        &:hover {
+          background-color: #f70f47;
+
+          &:before {
+            //right: -30px;
+            //@include opacity(0);
+            @include animation(arrowRight 2s infinite);
+          }
+        }
+      }
+      &._mini {
+        min-height: 205px;
+        border: 0;
+
+        .search-vacancies__item {
+          &_footer {
+            height: 100%;
+            padding-bottom: 0;
+
+            .name {
+              margin-bottom: 0;
+              color: #000;
+              font-weight: 300;
+            }
+            .price {
+              margin-top: 15px;
+              margin-bottom: auto;
+              position: static;
+
+              @media (max-width: $screen-xs) {
+                margin-left: auto;
+                margin-right: auto;
+                @include translate(0, 0);
+              }
+            }
+          }
+          &_hover {
+            .name {
+              line-height: 1.2;
+              font-weight: 300;
+            }
+            .price {
+              color: #fff;
+              font-size: 19px;
+              padding-left: 30px;
+              background: url('../img/svg/purse-white.svg') left 3px no-repeat;
+            }
+            .btn {
+              width: auto;
+              min-width: 0;
+              padding-left: 30px;
+              padding-right: 30px;
+            }
+          }
+        }
+        @media (max-width: $screen-xs) {
+          min-height: 175px;
+        }
+      }
+      &:hover {
+        .search-vacancies__item {
+          &_header,
+          &_footer {
+            @include translate(0, 100%);
+          }
+          &_hover {
+            pointer-events: all;
+            @include translate(0, 0);
+            //@include opacity(1);
+          }
+        }
+      }
+      &_header {
+        padding: 20px 30px 22px;
+        background-color: map_get($colors, default);
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include align-items(center);
+        @include transition($transition);
+
+        .number {
+          color: #fff;
+          font-size: 46px;
+          font-weight: 700;
+          margin-right: 12px;
+
+          @media (max-width: $screen-sm-max) {
+            font-size: 43px;
+          }
+        }
+        .text {
+          color: #fff;
+          font-size: 16px;
+
+          @media (max-width: $screen-sm-max) {
+            font-size: 15px;
+          }
+        }
+        @media (max-width: $screen-xs) {
+          text-align: center;
+          @include justify-content(center);
+        }
+      }
+      &_footer {
+        padding: 20px 35px 65px;
+        background-color: #fff;
+        position: relative;
+        min-height: 165px;
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include align-items(center);
+        @include transition($transition);
+
+        .name {
+          margin: auto 0;
+          font-size: 22px;
+          color: map_get($colors, default);
+          line-height: 1.2;
+
+          @media (max-width: $screen-sm-max) {
+            font-size: 20px;
+          }
+          @media (max-width: $screen-xs) {
+            text-align: center;
+          }
+        }
+        .price {
+          position: absolute;
+          font-size: 20px;
+          bottom: 30px;
+          left: 35px;
+          right: 35px;
+          color: #909090;
+          line-height: 1.2;
+          padding-left: 30px;
+          background: url("../img/svg/purse.svg") -1px 1px no-repeat;
+          background-size: 22px;
+
+          @media (max-width: $screen-sm-max) {
+            font-size: 18px;
+          }
+          @media (max-width: $screen-xs) {
+            left: 50%;
+            right: inherit;
+            @include translate(-50%, 0);
+          }
+        }
+        @media (max-width: $screen-xs) {
+          min-height: 145px;
+          text-align: center;
+          @include justify-content(center);
+        }
+      }
+      &_hover {
+        position: absolute;
+        left: -2px;
+        right: -2px;
+        bottom: -1px;
+        top: -1px;
+        padding: 20px 18px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: url('../img/pattern-v.png') center no-repeat map_get($colors, default);
+        background-size: 105%;
+        pointer-events: none;
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include align-items(center);
+        @include justify-content(center);
+        @include transition($transition);
+        //@include opacity(0);
+        @include translate(0, -100%);
+
+        .name {
+          text-align: center;
+          display: block;
+          width: 100%;
+          color: #fff;
+          font-size: 20px;
+
+          @media (max-width: $screen-sm-max) {
+            font-size: 18px;
+          }
+        }
+        .number {
+          text-align: center;
+          display: block;
+          width: 100%;
+          color: #fff;
+          font-size: 60px;
+          font-weight: 700;
+          margin-top: auto;
+
+          @media (max-width: $screen-sm-max) {
+            font-size: 40px;
+          }
+        }
+        .text {
+          text-align: center;
+          display: block;
+          width: 100%;
+          color: #fff;
+          font-size: 15px;
+          margin-bottom: auto;
+        }
+        .btn {
+          font-weight: 500;
+          width: 100%;
+          padding: 0 5px;
+
+          @media (max-width: $screen-sm-max) {
+            font-size: 12px;
+          }
+        }
+      }
+      .label {
+        font-size: 15px;
+        margin: auto -35px 0;
+        width: calc(100% + 75px);
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+        border-radius: 0 0 6px 6px;
+      }
+      @media (max-width: $screen-md-max) {
+        width: calc(25% - 25px);
+      }
+      @media (max-width: $screen-sm-max) {
+        width: calc(33.3333% - 25px);
+      }
+      @media (max-width: $screen-xs-max) {
+        width: calc(50% - 25px);
+      }
+      @media (max-width: $screen-xs) {
+        width: calc(100% - 25px);
+      }
+    }
+    &__filter {
+      position: relative;
+      padding: 34px 0 0;
+      margin: -34px 0 35px;
+      overflow: hidden;
+      @include flexbox();
+      @include flex-wrap(wrap);
+
+      &.active {
+        .search-vacancies__form {
+          width: 100%;
+
+          input {
+            pointer-events: all;
+          }
+        }
+      }
+      .search-vacancies__form {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        margin-left: auto;
+        z-index: 10;
+        overflow: hidden;
+        @include transition($transition);
+
+        input {
+          pointer-events: none;
+        }
+        @media (max-width: $screen-sm-max) {
+          width: 100%;
+          position: static;
+          margin-bottom: 35px;
+          @include translate(0, 0);
+
+          input {
+            height: 52px;
+            line-height: 52px;
+            font-size: 19px;
+            padding-left: 25px;
+            @include placeholder {
+              font-size: 19px;
+              line-height: 52px;
+            }
+          }
+          button {
+            right: 20px;
+          }
+          .icon {
+            max-width: 22px;
+            max-height: 22px;
+          }
+        }
+        @media (max-width: $screen-xs-max) {
+          input {
+            line-height: 52px;
+          }
+        }
+      }
+      .sort {
+        width: 70%;
+
+        &-mobile {
+          display: none;
+        }
+        &-all {
+          border-radius: 5px;
+          background-color: rgb(182, 182, 182);
+          height: 35px;
+          font-size: 17px;
+          color: rgb(255, 255, 255);
+          line-height: 32px;
+          padding: 0 18px;
+          display: inline-block;
+          margin-right: 13px;
+        }
+        &-by {
+          background-color: #fff;
+          height: 35px;
+          font-size: 17px;
+          color: rgb(126, 141, 141);
+          line-height: 32px;
+          padding: 0 25px 0 ;
+          display: inline-block;
+          margin-right: 13px;
+          border: 1px solid #E6EFEE;
+          border-radius: 0 5px 5px 0;
+          border-left: 0;
+          position: relative;
+
+          &._dark_blue {
+            &:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              width: 11px;
+              background: map_get($colors, default);
+            }
+          }
+          &._blue {
+            &:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              width: 11px;
+              background: map_get($colors, secondary);
+            }
+          }
+          &._red {
+            &:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              width: 11px;
+              background: map_get($colors, primary);
+            }
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        @media (max-width: $screen-sm-max) {
+          width: 100%;
+        }
+        @media (max-width: $screen-xs-max) {
+          display: none;
+
+          &-mobile {
+            display: block;
+            width: 100%;
+            position: relative;
+            padding: 9px 0 9px;
+            border-bottom: 1px solid #E7EFEF;
+
+            &.active {
+              .sort-mobile__current {
+                &:before {
+                  @include rotate(-180deg);
+                }
+              }
+              ul {
+                pointer-events: all;
+                @include opacity(1);
+              }
+            }
+            &__current {
+              display: block;
+              width: 100%;
+              position: relative;
+              padding-right: 15px;
+              cursor: pointer;
+
+              &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                border-top: 5px solid #000;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                @include transition($transition);
+              }
+            }
+            .color {
+              display: inline-block;
+              vertical-align: middle;
+              width: 13px;
+              height: 13px;
+              margin-right: 12px;
+            }
+            .text {
+              display: inline-block;
+              vertical-align: middle;
+              font-size: 18px;
+              color: rgb(0, 0, 0);
+              line-height: 1.2;
+            }
+            ul {
+              position: absolute;
+              top: 100%;
+              left: 0;
+              right: 0;
+              z-index: 3;
+              background-color: #fff;
+              pointer-events: none;
+              @include box-shadow(0 10px 15px -5px rgba(0,0,0,.3));
+              @include opacity(0);
+              @include transition($transition);
+
+              li {
+                border-left: 5px solid;
+                padding: 5px 15px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      .search-filter {
+        width: 30%;
+        font-size: 20px;
+        color: #9B9B9B;
+        line-height: 1.2;
+        cursor: pointer;
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include align-items(center);
+
+        span {
+          margin-left: auto;
+        }
+        .icon {
+          color: map_get($colors, secondary);
+          margin-left: 23px;
+        }
+        @media (max-width: $screen-sm-max) {
+          display: none;
+        }
+      }
+      @media (max-width: $screen-sm-max) {
+        padding-top: 21px;
+      }
+      @media (max-width: $screen-xs-max) {
+        padding-top: 34px;
+        overflow: inherit;
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      padding: 60px 0 100px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 26px 0 60px;
+    }
+  }
+}
+@include keyframes(arrowRight) {
+  0% {
+    right: 30px;
+  }
+  25% {
+    right: -30px;
+    @include opacity(0);
+  }
+  35% {
+    right: 30px;
+  }
+  100% {
+    @include opacity(1)
+  }
+}

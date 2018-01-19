@@ -1,0 +1,62 @@
+.breadcrumbs {
+  margin-bottom: 22px;
+
+  li {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+
+    &.back {
+      display: none;
+    }
+    &:not(:last-child) {
+      &:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 2px 0 5px;
+        width: 7px;
+        height: 8px;
+        background: url('../img/svg/arrow-breadcrumbs.svg') no-repeat;
+      }
+    }
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+      color: rgb(61, 191, 232);
+      text-decoration: underline;
+    }
+    @media (max-width: $screen-sm-max) {
+      display: none;
+
+      &.back {
+        display: block;
+        font-size: 18px;
+
+        &:after {
+          display: none;
+        }
+        &:before {
+          content: '';
+          display: inline-block;
+          margin: 0 10px 0 0;
+          width: 10px;
+          height: 10px;
+          background: url('../img/svg/icon-back.svg') no-repeat;
+          @include rotate(-180deg);
+        }
+        a {
+          text-decoration: none;
+          color: map_get($colors, secondary);
+        }
+      }
+    }
+  }
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: 7px;
+  }
+}

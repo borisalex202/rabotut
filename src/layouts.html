@@ -1,0 +1,27 @@
+@@include('templates/_head.html', {
+	"title": "Rabotut | Список всех страниц"
+})
+@@include('templates/_header.html')
+				<div class="widget	">
+					<div class="container">
+						<h2>Список всех сверстанных страниц:</h2>
+						<ul style="line-height: 28px">
+							<li>- <a href="index.html" target="_blank">Главная</a></li>
+							<li>- <a href="404.html" target="_blank">Ошибка 404</a></li>
+							<li>- <a href="faq.html" target="_blank">Вопрос и ответ</a></li>
+							<li>- <a href="stock.html" target="_blank">Акции</a></li>
+							<li>- <a href="vacancies.html" target="_blank">Вакансии</a></li>
+							<li>- <a href="vacancies_detail.html" target="_blank">Детальная вакансии</a></li>
+							<li>- <a href="offices.html" target="_blank">Наши офисы</a></li>
+							<li>- <a href="about.html" target="_blank">О нас</a></li>
+							<li>- <a href="staff.html" target="_blank">Сотрудникам</a></li>
+						</ul>
+					</div>
+				</div>
+@@include('templates/_footer.html')
+@@include('templates/_modals.html', {
+	"call_me": "true",
+	"respond_job": "true"
+})
+@@include('templates/_scripts_styles.html')
+@@include('templates/_end.html')

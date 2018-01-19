@@ -1,0 +1,134 @@
+.counter {
+  background-color: map_get($colors, counter);
+
+  &-block {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      right: 0;
+      width: 217px;
+      height: 378px;
+      z-index: 2;
+      pointer-events: none;
+      background: url('../img/logo-big.png') no-repeat;
+      background-size: cover;
+
+      @media (max-width: 1400px) {
+        background-size: 85%;
+        background-position: right top;
+      }
+      @media (max-width: $screen-md-max) {
+        bottom: 120px;
+        background-size: 80%;
+        background-position: right bottom;
+      }
+      @media (max-width: $screen-xs-max) {
+        bottom: inherit;
+        top: 0;
+        margin-top: -240px;
+        margin-right: -10px;
+        background-size: 55%;
+      }
+    }
+  }
+  &-list {
+    @include flexbox();
+    @include flex-wrap(wrap);
+  }
+  &-head {
+    width: 33%;
+    padding: 27px 0;
+    font-size: 39.7px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.347;
+    position: relative;
+    z-index: 2;
+
+    .icon {
+      position: relative;
+      top: -1px;
+    }
+
+    @media (max-width: $screen-md-max) {
+      width: 100%;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 31px 10px;
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+  &-item {
+    width: 20.3333333%;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+    @include box-shadow(inset 0px 16px 51px 0px rgba(0, 0, 0, 0.08));
+
+    .number {
+      display: block;
+      width: 100%;
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 76px;
+      margin-top: auto;
+
+      @media (max-width: $screen-xs-max) {
+        font-size: 45px;
+        line-height: 49px;
+        margin-bottom: 7px;
+      }
+    }
+    .text {
+      width: 100%;
+      margin-bottom: auto;
+
+      @media (max-width: $screen-xs-max) {
+        font-size: 15px;
+      }
+    }
+    @media (max-width: $screen-md-max) {
+      padding: 35px 10px;
+      width: 33.3333%;
+    }
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      padding: 26px 10px;
+    }
+  }
+  .container {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: calc(50% - 15px);
+      right: -100%;
+      bottom: 0;
+      z-index: 1;
+      background-color: #214f87;
+    }
+    @media (max-width: $screen-md-max) {
+      width: 100%;
+      padding: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.icon {
+  display: inline-block;
+  @include transition($transition);
+
+  &-menu {
+    display: inline-block;
+    height: 94px;
+    width: 77px;
+    margin-right: 14px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+  &-bar {
+    display: block;
+    width: 100%;
+    background-color: map_get($colors, default);
+    max-width: 29px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+  &-logo {
+    max-width: 187px;
+    max-height: 47px;
+  }
+  &-dropdown {
+    max-width: 7px;
+    max-height: 6px;
+    color: map_get($colors, secondary);
+  }
+  &-address {
+    max-width: 14px;
+    max-height: 17px;
+    color: #000;
+  }
+  &-tel {
+    max-width: 16px;
+    max-height: 20px;
+    color: #000;
+  }
+  &-prev,
+  &-next {
+    max-width: 19px;
+    max-height: 36px;
+    color: map_get($colors, default);
+  }
+  &-search {
+    max-width: 27px;
+    max-height: 27px;
+    color: map_get($colors, default);
+  }
+  &-close {
+    max-width: 16px;
+    max-height: 16px;
+    color: #fff;
+  }
+  &-facebook {
+    max-width: 13px;
+    max-height: 15px;
+    color: #fff;
+  }
+  &-twitter {
+    max-width: 12px;
+    max-height: 12px;
+    color: #fff;
+    position: relative;
+    left: 1px;
+    top: -1px;
+  }
+  &-odnoklassniki {
+    max-width: 13px;
+    max-height: 13px;
+    color: #fff;
+  }
+  &-vkontakte {
+    max-width: 14px;
+    max-height: 14px;
+    color: #fff;
+    position: relative;
+    left: -1px;
+  }
+  &-google-plus {
+    max-width: 14px;
+    max-height: 12px;
+    color: #fff;
+  }
+  &-ruble {
+    max-width: 12px;
+    max-height: 16px;
+    color: inherit;
+    margin-left: 3px;
+    position: relative;
+    top: 1px;
+  }
+}

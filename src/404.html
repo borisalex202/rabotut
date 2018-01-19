@@ -1,0 +1,24 @@
+@@include('templates/_head.html', {
+	"title": "Rabotut | Ошибка 404"
+})
+@@include('templates/_header.html')
+				<div class="widget widget-error calc-height">
+					<div class="container">
+						<div class="col-lg-5 col-xs-12 widget-error__item number">
+							<span>404</span>
+						</div>
+						<div class="col-lg-7 col-xs-12 widget-error__item">
+							<h1 class="widget-error__title">Что-то пошло не так :(</h1>
+							<p class="widget-error__description">Запрашиваемой страницы не существует, <br>но мы все еще можем найти вам работу</p>
+							<a href="#" class="btn btn-default _huge">Записаться на собеседование</a>
+							<a href="index.html" class="btn btn-primary _huge">Вернуться на главную</a>
+						</div>
+					</div>
+				</div>
+@@include('templates/_footer.html')
+@@include('templates/_modals.html', {
+	"call_me": "true",
+	"respond_job": "true"
+})
+@@include('templates/_scripts_styles.html')
+@@include('templates/_end.html')

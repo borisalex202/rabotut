@@ -1,0 +1,98 @@
+.feedback {
+  &-container {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include align-items(center);
+  }
+  &-left {
+    width: 50%;
+
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 55px;
+
+      br {
+        display: none;
+      }
+    }
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 48px;
+    }
+  }
+  &-right {
+    width: 50%;
+
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+    }
+  }
+  &-title {
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    margin: 0 0 30px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 19px;
+    }
+  }
+  &-desc {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    line-height: 1.55;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 18px;
+    }
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 25px;
+    }
+  }
+  &-tel {
+    font-size: 32px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    line-height: 1.125;
+
+    .icon {
+      max-width: 23px;
+      max-height: 26px;
+      position: relative;
+      top: 2px;
+      transform: rotate(20deg);
+    }
+    &:hover {
+      .icon {
+        color: map_get($colors, primary);
+      }
+    }
+  }
+  textarea {
+    height: auto;
+    max-height: 80px;
+
+    @media (max-width: $screen-sm-max) {
+      max-height: 105px;
+    }
+    @media (max-width: $screen-xs-max) {
+      height: auto;
+      max-height: 105px;
+    }
+  }
+  [class*=col-] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  @media (max-width: $screen-xs) {
+    .btn {
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+}

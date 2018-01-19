@@ -1,0 +1,161 @@
+@@include('templates/_head.html', {
+	"title": "Rabotut | Вакансии"
+})
+@@include('templates/_header.html', {
+	"menu_item": "vacancies"
+})
+				<div class="widget widget-standard bg-squeeze">
+					<div class="container">
+						<ul class="breadcrumbs">
+							<li class="back"><a href="index.html">Назад</a></li>
+							<li><a href="index.html">Главная</a></li>
+							<li><a href="vacancies.html">Вакансии</a></li>
+							<li>Счетчик-ревизор</li>
+						</ul>
+						<h1 class="heading">Счетчик-ревизор</h1>
+
+						<div class="vacancies-detail">
+							<div class="vacancies-detail__left">
+								<div class="vacancies-detail__tools">
+									<a href="#" class="price">
+										от 15 000
+										<svg class="icon icon-ruble"><use xlink:href="#icon-ruble"></use></svg>
+									</a>
+									<a href="#" class="location">Москва</a>
+								</div>
+
+								<h5>Должностные обязанности:</h5>
+								<ul>
+									<li>Сканирование и пересчет товарных запасов (одежды, обуви, бижутерии, продуктов питания, бытовой химии, строительных материалов, основных средств) на Объектах (складах, торговых точках, распределительных центрах)</li>
+									<li>Работа с терминалом сбора данных</li>
+									<li>Сканирование и пересчёт товарно-материальных ценностей на инвентаризации при помощи терминала сбора данных (сканера) и вручную.</li>
+								</ul>
+
+								<h5>Должностные обязанности:</h5>
+								<ul>
+									<li>Опрятный внешний вид</li>
+									<li>Внимательность, ответственность, честность</li>
+									<li>Знание ПК</li>
+									<li>Опыт работы с ТСД (желателен)</li>
+									<li>Высокая мотивация к работе</li>
+									<li>Отсутствие вредных привычек, мешающих исполнять свои должностные обязанности</li>
+								</ul>
+
+								<h5>Место проведения собеседования:</h5>
+								<p>Москва г, Маршала Катукова ул, дом 25, 123181</p>
+							</div>
+							<div class="vacancies-detail__right">
+								<div class="vacancies-detail__form">
+									<p class="title">Откликнуться на вакансию</p>
+									<div class="form">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Ваше имя">
+										</div>
+										<div class="form-group">
+											<input type="email" class="form-control" placeholder="Ваш E-mail">
+										</div>
+										<div class="form-group">
+											<input type="tel" class="form-control phone" placeholder="Ваш телефон">
+										</div>
+										<label class="checkbox">
+											<input type="checkbox">
+											<span class="icon"></span>
+											<span class="text">Согласен с <a href="img/rabotut_policy.pdf" target="_blank">условиями</a> использования персональных данных</span>
+										</label>
+										<button class="btn btn-default _huge">Записаться на&nbsp;собеседование</button>
+									</div>
+								</div>
+							</div>
+							<div class="vacancies-detail__map">
+								<div id="map" class="map"></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="widget widget-help">
+					<div class="container">
+						<h3>Персональная помощь</h3>
+
+						<div class="help-block">
+							<div class="help-list">
+								<div class="help-item chat">
+									<h4 class="help-item__title">Онлайн-консультант</h4>
+									<p>Появились вопросы, на которые нужно оперативно ответить? Наш консультант уже ждет вас онлайн</p>
+									<a href="#" class="link">Начать онлайн-чат</a>
+								</div>
+								<div class="help-item line">
+									<h4 class="help-item__title">Горячая линия</h4>
+									<p>Задайте волнующий вас вопрос</p>
+									<a href="tel:88005552888" class="tel">8 800 555 28 88</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+@@include('templates/_footer.html')
+@@include('templates/_modals.html', {
+	"call_me": "true",
+	"respond_job": "true"
+})
+@@include('templates/_scripts_styles.html')
+				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+				<script>
+					ymaps.ready(function () {
+						var myMap = new ymaps.Map('map', {
+								center: [55.771574, 37.613856],
+								zoom: 18,
+								controls: [],
+								scrollWhell: false
+							}, {
+								searchControlProvider: 'yandex#search'
+							}),
+
+							ZoomLayout = ymaps.templateLayoutFactory.createClass("<div class='zoom'>" +
+								"<div id='zoom-in' class='zoom-in'>+</div>" +
+								"<div id='zoom-out' class='zoom-out'>—</div>" +
+								"</div>", {
+
+								build: function () {
+									ZoomLayout.superclass.build.call(this);
+
+									this.zoomInCallback = ymaps.util.bind(this.zoomIn, this);
+									this.zoomOutCallback = ymaps.util.bind(this.zoomOut, this);
+
+									$('#zoom-in').bind('click', this.zoomInCallback);
+									$('#zoom-out').bind('click', this.zoomOutCallback);
+								},
+
+								clear: function () {
+									$('#zoom-in').unbind('click', this.zoomInCallback);
+									$('#zoom-out').unbind('click', this.zoomOutCallback);
+
+									ZoomLayout.superclass.clear.call(this);
+								},
+
+								zoomIn: function () {
+									var map = this.getData().control.getMap();
+									map.setZoom(map.getZoom() + 1, {checkZoomRange: true});
+								},
+
+								zoomOut: function () {
+									var map = this.getData().control.getMap();
+									map.setZoom(map.getZoom() - 1, {checkZoomRange: true});
+								}
+							}),
+							zoomControl = new ymaps.control.ZoomControl({options: {layout: ZoomLayout}});
+
+						myMap.controls.add(zoomControl);
+                        myMap.behaviors.disable('scrollZoom');
+
+						myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+							iconLayout: 'default#image',
+							iconImageHref: 'img/svg/icon-map-marker.svg',
+							iconImageSize: [44, 58],
+							iconImageOffset: [-22, -29]
+						});
+						myMap.geoObjects
+							.add(myPlacemark)
+					})
+				</script>
+@@include('templates/_end.html')

@@ -1,0 +1,24 @@
+{
+  "name": "rabotut",
+  "authors": [
+    "Alexander Boris <borisalex202@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "2.1.*",
+    "bootstrap-sass": "3.*",
+    "slick-carousel": "^1.8.1",
+    "jquery.form-styler": "^2.0.2",
+    "jquery-animateNumber": "^0.0.14",
+    "jquery-mask-plugin": "^1.14.12"
+  }
+}

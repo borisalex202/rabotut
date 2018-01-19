@@ -1,0 +1,17 @@
+.address {
+  &-block {
+    margin-left: 10px;
+    @include inline-flex();
+    @include align-items(center);
+
+    .icon {
+      margin-right: 9px;
+    }
+  }
+  &-current {
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    letter-spacing: -0.2px
+  }
+}

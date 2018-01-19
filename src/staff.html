@@ -1,0 +1,80 @@
+@@include('templates/_head.html', {
+	"title": "Rabotut | Сотрудникам"
+})
+@@include('templates/_header.html', {
+	"menu_item": "staff"
+})
+				<div class="widget widget-standard bg-gray staff">
+					<div class="container">
+						<ul class="breadcrumbs">
+							<li class="back"><a href="index.html">Назад</a></li>
+							<li><a href="index.html">Главная</a></li>
+							<li>Сотрудникам</li>
+						</ul>
+						<h1 class="heading">Сотрудникам</h1>
+
+						<div class="question-block">
+							<span>Проблемы с работодателем? Обратитесь по телефону горячей линии</span>
+							<a href="tel:88007008484" class="tel">
+								<svg class="icon icon-tel"><use xlink:href="#icon-tel"></use></svg>
+								8 800 700 84 84
+							</a>
+						</div>
+
+						<div class="frame _swipe _left">
+							<div class="frame-thumb" style="background-image: url('img/img6.jpg')">
+								<img src="img/img6.jpg" alt="">
+							</div>
+							<div class="frame-info">
+								<h4>Обучение</h4>
+								<p>Для кандидатов без опыта работы мы организуем очное и дистанционное обучение основам профессии.  Это позволяет максимально быстро адаптироваться и войти полноценно в рабочий процесс.</p>
+								<p>Наша цель – обеспечить единые стандарты работы во всей России, поэтому для каждого проекта мы готовим отдельное обучение, чтобы наши сотрудники знали продукцию, правила, стандарты работы наших клиентов.</p>
+							</div>
+						</div>
+						<div class="frame _right">
+							<div class="frame-thumb" style="background-image: url('img/img7.jpg')">
+								<img src="img/img7.jpg" alt="">
+							</div>
+							<div class="frame-info">
+								<h4>Возможности</h4>
+								<p>Приходя работать на проекты РАБОТУТ, каждый новый сотрудник знает о своих карьерных возможностях.</p>
+								<p>Два раза в год наши партнеры проводят независимую аттестацию сотрудников, по итогам которой лучшие сотрудники получают продвижение в карьере. Каждый квартал проводится конкурс на лучшего сотрудника. Победители получают памятные призы и награды.</p>
+								<p>Социальная миссия компании РАБОТУТ – дать шанс каждому соискателю, независимо от его опыта, возраста, честно зарабатывать на жизнь, получать достойную оплату и профессиональное признание.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="widget widget-success">
+					<div class="container">
+						<p class="widget-title">
+							Поделитесь своей историей успеха
+							<span class="widget-subtitle">Напиши нам. Твое мнение важно для нас!</span>
+						</p>
+						<form action="staff.html" class="form">
+							<div class="row">
+								<div class="col-sm-6 col-xs-12 form-group">
+									<input type="text" class="form-control" placeholder="Ваше имя *">
+								</div>
+								<div class="col-sm-6 col-xs-12 form-group">
+									<input type="tel" class="form-control phone" placeholder="Телефон *">
+								</div>
+							</div>
+							<div class="form-group">
+								<textarea rows="2" class="form-control" placeholder="Комментарий"></textarea>
+							</div>
+							<label class="checkbox">
+								<input type="checkbox" checked>
+								<span class="icon"></span>
+								<span class="text">Согласен с <a href="img/rabotut_policy.pdf" target="_blank">условиями</a> использования персональных данных</span>
+							</label>
+							<button class="btn btn-default _huge">Отправить</button>
+						</form>
+					</div>
+				</div>
+@@include('templates/_footer.html')
+@@include('templates/_modals.html', {
+	"call_me": "true"
+})
+@@include('templates/_scripts_styles.html')
+@@include('templates/_end.html')

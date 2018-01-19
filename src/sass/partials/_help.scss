@@ -1,0 +1,127 @@
+.help {
+  &-block {
+    margin-top: 90px;
+
+    @media (max-width: $screen-xs-max) {
+      margin-top: 70px;
+    }
+  }
+  &-title {
+    margin-bottom: 50px;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+  &-list {
+    margin: -24px -12px 0;
+    @include flexbox();
+    @include flex-wrap(wrap);
+
+    @media (max-width: $screen-xs-max) {
+      margin-top: -30px;
+    }
+  }
+  &-item {
+    margin: 24px 12px 0;
+    width: calc(50% - 24px);
+    border: 1px solid rgb(233, 242, 242);
+    border-radius: 6px;
+    background-color: rgb(252, 255, 255);
+    padding: 45px 90px 65px 210px;
+    @include box-shadow(0px 20px 24px 0px rgba(49, 49, 49, 0.05));
+
+    &.chat {
+      background-image: url('../img/svg/icon-chat.svg');
+      background-repeat: no-repeat;
+      background-position: 60px center;
+    }
+    &.line {
+      background-image: url('../img/svg/icon-doc.svg');
+      background-repeat: no-repeat;
+      background-position: 80px center;
+    }
+    &__title {
+      font-size: 23px;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+    .link {
+      display: inline-block;
+      line-height: .8;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: map_get($colors, secondary);
+      border-bottom: 2px solid;
+
+      &:hover {
+        text-decoration: none;
+        color: map_get($colors, primary);
+      }
+    }
+    .tel {
+      font-size: 32px;
+      font-weight: 300;
+      color: #000;
+
+      &:hover {
+        color: map_get($colors, secondary);
+      }
+    }
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+    @media (min-width: $screen-md) and (max-width: $screen-md-max) {
+      padding-left: 140px;
+      padding-right: 40px;
+
+      &.chat {
+        background-size: 90px;
+        background-position: 30px center;
+      }
+      &.line {
+        background-size: 80px;
+        background-position: 30px center;
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      width: calc(100% - 24px);
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 135px 30px 40px;
+      text-align: center;
+      margin-top: 30px;
+
+      &__title {
+        font-size: 21px;
+        margin-bottom: 20px;
+      }
+      &.chat {
+        background-size: 80px;
+        background-position: center 35px;
+      }
+      &.line {
+        background-size: 60px;
+        background-position: center 35px;
+      }
+      .tel {
+        font-size: 23px;
+        color: map_get($colors, secondary);
+        border-bottom: 2px dotted;
+        margin-left: -5px;
+        margin-right: -5px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 300;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

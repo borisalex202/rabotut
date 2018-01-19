@@ -1,0 +1,41 @@
+.tel {
+  &-block {
+    margin-top: -7px;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: 70px;
+    }
+    span {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 11.543px;
+      font-weight: 300;
+      color: rgba(127, 127, 127, 0.549);
+    }
+    a {
+      display: block;
+      font-size: 18.646px;
+      color: rgb(0, 0, 0);
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 1.18;
+      letter-spacing: 0.7px;
+      position: relative;
+
+      &:hover {
+        color: map_get($colors, primary);
+
+        .icon {
+          color: map_get($colors, primary);
+        }
+      }
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        @include transform(translate(0, -50%) rotate(15deg))
+      }
+    }
+  }
+}

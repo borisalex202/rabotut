@@ -1,0 +1,168 @@
+.btn {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0 30px;
+  border: 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  cursor: pointer;
+  width: auto;
+  height: 40px;
+  line-height: 36px;
+  min-width: 180px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  letter-spacing: 0.1px;
+  @include transition($transition);
+
+  &._huge {
+    height: 55px;
+    line-height: 52px;
+  }
+  &-default {
+    background: map_get($colors, btnDefault);
+    border: 2px solid map_get($colors, btnDefault);
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      background: map_get($colors, btnDefaultHover);
+      border: 2px solid map_get($colors, btnDefaultHover);
+
+    }
+    &:focus,
+    &:active,
+    &:active:hover {
+      background: darken(map_get($colors, btnDefaultHover), 20%);
+      border: 2px solid darken(map_get($colors, btnDefaultHover), 20%);
+      color: #fff;
+
+      &:before {
+        height: 100%;
+        background-color: darken(map_get($colors, btnDefaultHover), 10%);
+      }
+    }
+    &.disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      color: #fff;
+      border: 2px solid map_get($colors, linkDisabled);
+      background: map_get($colors, linkDisabled);
+
+      &:hover {
+        background: map_get($colors, linkDisabled);
+        color: #fff;
+
+      }
+      &:focus,
+      &:active,
+      &:active:hover {
+        color: #fff;
+        border: 2px solid map_get($colors, linkDisabled);
+        background: map_get($colors, linkDisabled);
+        @include box-shadow(none);
+      }
+    }
+    &._border {
+      background: transparent;
+      font-weight: 600;
+      border: 2px solid map_get($colors, btnDefault);
+      color: map_get($colors, btnDefault);
+
+      &:hover {
+        color: #fff;
+        background: map_get($colors, btnDefaultHover);
+        border: 2px solid map_get($colors, btnDefaultHover);
+
+      }
+      &:focus,
+      &:active,
+      &:active:hover {
+        background: darken(map_get($colors, btnDefaultHover), 20%);
+        border: 2px solid darken(map_get($colors, btnDefaultHover), 20%);
+        color: #fff;
+
+        &:before {
+          height: 100%;
+          background-color: darken(map_get($colors, btnDefaultHover), 10%);
+        }
+      }
+      &.disabled,
+      &[disabled] {
+        cursor: not-allowed;
+        color: #fff;
+        border: 2px solid map_get($colors, linkDisabled);
+        background: map_get($colors, linkDisabled);
+
+        &:hover {
+          background: map_get($colors, linkDisabled);
+          color: #fff;
+
+        }
+        &:focus,
+        &:active,
+        &:active:hover {
+          color: #fff;
+          border: 2px solid map_get($colors, linkDisabled);
+          background: map_get($colors, linkDisabled);
+          @include box-shadow(none);
+        }
+      }
+    }
+  }
+  &-primary {
+    background: map_get($colors, btnPrimary);
+    border: 2px solid map_get($colors, btnPrimary);
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      background: map_get($colors, btnPrimaryHover);
+      border: 2px solid map_get($colors, btnPrimaryHover);
+
+    }
+    &:focus,
+    &:active,
+    &:active:hover {
+      background: darken(map_get($colors, btnPrimaryHover), 20%);
+      border: 2px solid darken(map_get($colors, btnPrimaryHover), 20%);
+      color: #fff;
+
+      &:before {
+        height: 100%;
+        background-color: darken(map_get($colors, btnDefaultHover), 10%);
+      }
+    }
+    &.disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      color: #fff;
+      border: 2px solid map_get($colors, linkDisabled);
+      background: map_get($colors, linkDisabled);
+
+      &:hover {
+        background: map_get($colors, linkDisabled);
+        color: #fff;
+
+      }
+      &:focus,
+      &:active,
+      &:active:hover {
+        color: #fff;
+        border: 2px solid map_get($colors, linkDisabled);
+        background: map_get($colors, linkDisabled);
+        @include box-shadow(none);
+      }
+    }
+  }
+}
+a.btn {
+  line-height: 36px;
+
+  &._huge {
+    line-height: 50px;
+  }
+}

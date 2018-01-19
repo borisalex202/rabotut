@@ -1,0 +1,200 @@
+.filter {
+  padding: 43.5px 0;
+  background-color: map_get($colors, default);
+
+  &._other {
+    .filter {
+      &__form_group {
+        &_btn {
+          min-width: 150px;
+          width: auto;
+          max-width: 150px;
+
+          @media (max-width: $screen-md-max) {
+            width: 100% !important;
+            max-width: none;
+            text-align: center !important;
+
+            .btn {
+              margin-top: 30px;
+            }
+          }
+          @media (max-width: $screen-xs-max) {
+            .btn {
+              margin-top: 0;
+            }
+          }
+        }
+        @media (max-width: $screen-md-max) {
+          width: 33.3333%;
+          text-align: left;
+        }
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: $screen-md-max) {
+      text-align: center;
+    }
+  }
+  &__title {
+    font-size: 38.7px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    line-height: 1.347;
+    width: 42%;
+    margin-top: -15px;
+
+    span {
+      margin-top: 5px;
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.49);
+      line-height: 1.2;
+    }
+    a {
+      color: inherit;
+      font-size: inherit;
+      text-decoration: underline;
+    }
+    @media (max-width: $screen-md-max) {
+      margin-top: 0;
+      width: 100%;
+
+      &.lg {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      &.xs {
+        text-align: center;
+        margin-top: 15px;
+
+        @media (max-width: $screen-xs-max) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  &__container {
+    margin: 0 -5px;
+    @include flexbox();
+    @include align-items(center);
+
+    @media (max-width: $screen-md-max) {
+      @include flex-wrap(wrap);
+    }
+    @media (max-width: $screen-sm-max) {
+      @include justify-content(center);
+    }
+  }
+  &__form {
+    &_group {
+      width: 230px;
+      padding: 0 5px;
+      margin-bottom: auto;
+
+      @media (max-width: $screen-md-max) {
+        width: 240.5px;
+      }
+      @media (max-width: $screen-sm-max) {
+        width: 33.3333%;
+        min-width: 0;
+      }
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      &_btn {
+        width: auto;
+        min-width: 215px;
+
+        @media (max-width: $screen-sm-max) {
+          width: auto;
+        }
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+      }
+    }
+    &_control {
+      width: 100%;
+      height: 55px;
+      line-height: 55px;
+      color: #000;
+      padding: 0 18px;
+      border-radius: 5px;
+      border: 1px solid map_get($colors, borderInput);
+      @include transition($transition);
+      @include placeholder {
+          font-size: 15px;
+          color: rgb(0, 0, 0);
+      }
+
+      &:focus {
+        border-color: #1A8BFB;
+      }
+      &._error {
+        background-color: #F4967D;
+        color: #ce0000;
+        border-color: #EA202C;
+
+        @include placeholder {
+          color: #ce0000;
+        }
+      }
+      @media (max-width: $screen-xs-max) {
+        height: 55px;
+        line-height: 55px;
+      }
+    }
+  }
+  &__message {
+    margin: 0;
+    padding-left: 30px;
+    color: rgba(255, 255, 255, 0.49);
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 300;
+
+    a {
+      color: rgba(255, 255, 255, 0.49);
+      text-decoration: underline;
+    }
+    @media (max-width: $screen-md-max) {
+      padding-left: 0;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+    @media (max-width: $screen-xs-max) {
+      margin-top: 0;
+    }
+  }
+  .btn {
+    font-size: 12px;
+    height: 55px;
+    font-weight: 400;
+    line-height: 50px;
+
+    @media (max-width: $screen-sm-max) {
+      margin: 30px auto 0;
+      display: inline-block;
+    }
+    @media (max-width: $screen-xs-max) {
+      margin-top: 3px;
+      height: auto;
+      width: 100%;
+      font-size: 15px;
+      line-height: 20px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+  }
+  @media (max-width: $screen-sm-max) {
+    padding: 35px 0;
+  }
+  @media (max-width: $screen-xs-max) {
+    padding: 50px 0;
+  }
+}

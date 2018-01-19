@@ -1,0 +1,94 @@
+.pagination {
+  margin-top: 55px;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    font-size: 19px;
+    cursor: pointer;
+
+    &.prev {
+      position: relative;
+
+      &.disabled {
+        cursor: not-allowed;
+
+        &:hover:before,
+        &:before {
+          border-right-color: #ddd;
+        }
+      }
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        width: 0;
+        border-right: 8px solid #000;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        @include transition($transition);
+      }
+      &:hover:before {
+        border-right-color: map_get($colors, secondary);
+      }
+    }
+    &.next {
+      position: relative;
+
+      &.disabled {
+        cursor: not-allowed;
+
+        &:hover:before,
+        &:before {
+          border-left-color: #ddd;
+        }
+      }
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        width: 0;
+        border-left: 8px solid #000;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        @include transition($transition);
+      }
+      &:hover:before {
+        border-left-color: map_get($colors, secondary);
+      }
+    }
+    &.active {
+      a {
+        color: #fff;
+        background-color: map_get($colors, secondary);
+      }
+    }
+    &:hover {
+      color: map_get($colors, secondary);
+
+      a {
+        color: inherit;
+      }
+    }
+    a {
+      line-height: 27px;
+      color: #000;
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: 19px;
+      border-radius: 50%;
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    margin-top: 45px;
+  }
+}
