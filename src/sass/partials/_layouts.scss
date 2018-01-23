@@ -431,6 +431,9 @@
     background-color: #fff;
     border-radius: 6px 0 0 6px;
 
+    &.full {
+      width: 100%;
+    }
     @media (max-width: $screen-sm-max) {
       width: 100%;
       padding: 55px 45px;
@@ -625,6 +628,9 @@
         }
       }
     }
+    .btn {
+      margin-left: auto;
+    }
     @media (max-width: $screen-sm-max) {
       display: none;
     }
@@ -664,8 +670,6 @@
     background-position: center top;
 
     img {
-      min-width: 100%;
-      max-width: none;
     }
 
     @media (min-width: $screen-md) {
@@ -710,7 +714,7 @@
       min-height: 400px;
 
       img {
-        display: none;
+        min-width: 100%;
       }
     }
     h4 {
@@ -729,5 +733,12 @@
     &-thumb {
       min-height: 190px;
     }
+  }
+}
+.policy {
+  margin-top: 20px;
+
+  a {
+    font-size: 13px;
   }
 }

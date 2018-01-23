@@ -24,7 +24,7 @@ gulp.task('js-all', config.wrapPipe(function(success, error) {
             basepath: '@file',
             indent: true
         }).on('error', error))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(config.js.development.dest))
 }));
 
@@ -37,7 +37,7 @@ gulp.task('js-internal', config.wrapPipe(function(success, error) {
             basepath: '@file',
             indent: true
         }).on('error', error))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(config.js.development.dest))
 }));
 

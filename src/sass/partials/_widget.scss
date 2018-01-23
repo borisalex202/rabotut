@@ -484,7 +484,14 @@
   &.about {
     overflow: hidden;
 
+    .question-block {
+      margin-bottom: 0;
+    }
     .about {
+      &-container {
+        @include flexbox();
+        @include flex-wrap(wrap);
+      }
       &-info {
         width: 50%;
         padding-right: 65px;
@@ -500,23 +507,16 @@
         }
       }
       &-thumb {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        top: 0;
         width: 50%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top;
 
         @media (max-width: $screen-sm-max) {
-          top: inherit;
-          left: 0;
-          height: 610px;
           width: 100%;
         }
         @media (max-width: $screen-xs-max) {
-          height: 270px;
+          display: none;
         }
       }
     }
@@ -547,14 +547,11 @@
       }
     }
     @media (max-width: $screen-sm-max) {
-      padding-bottom: 610px;
-
       .breadcrumbs {
         text-align: center;
       }
     }
     @media (max-width: $screen-xs-max) {
-      padding-bottom: 270px;
     }
   }
   &.staff {

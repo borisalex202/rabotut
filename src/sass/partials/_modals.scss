@@ -33,6 +33,13 @@
       }
     }
   }
+  &.small {
+    .modal {
+      &-dialog {
+        max-width: 500px;
+      }
+    }
+  }
   &-dialog {
     width: 100%;
     max-width: 870px;

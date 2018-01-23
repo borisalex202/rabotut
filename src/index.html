@@ -83,7 +83,7 @@
 									<span class="name">Менеджер по продажам</span>
 									<span class="number">128</span>
 									<span class="text">вакансий</span>
-									<button class="btn btn-default" data-toggle="modal" data-target="#respond_job">Посмотреть вакансии</button>
+									<button class="btn btn-default" data-toggle="modal" data-target="#no_vacancy">Посмотреть вакансии</button>
 								</div>
 							</div>
 							<div class="search-vacancies__item">
@@ -416,7 +416,8 @@
 @@include('templates/_footer.html')
 @@include('templates/_modals.html', {
 	"call_me": "true",
-	"respond_job": "true"
+	"respond_job": "true",
+	"no_vacancy": "true"
 })
 @@include('templates/_scripts_styles.html')
 @@include('templates/_end.html')

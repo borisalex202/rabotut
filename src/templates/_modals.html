@@ -92,48 +92,54 @@
     </div>
 </div>
 }
-@@if(context.participate == "true") {
-<div class="modal fade job" id="participate" role="dialog">
+@@if(context.leader == "true") {
+<div class="modal fade job small" id="leader" role="dialog">
     <div class="modal-dialog" >
         <div class="modal-content">
             <button type="button" class="modal-close" data-dismiss="modal" aria-label="Закрыть">
                 <svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
             </button>
-            <div class="job__left">
-                <h5 class="modal-title">Участие в акции</h5>
+            <div class="job__left full">
+                <h5 class="modal-title">Написать руководителю компании</h5>
 
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Ваше имя *">
+                    <input type="text" class="form-control" placeholder="Как вас зовут? *">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control phone" placeholder="Телефон *">
+                    <input type="text" class="form-control phone" placeholder="E-mail *">
                 </div>
                 <div class="form-group">
-                    <textarea rows="2" class="form-control" placeholder="Комментарий"></textarea>
+                    <textarea rows="2" class="form-control" placeholder="Текст сообщения *"></textarea>
                 </div>
                 <label class="checkbox">
                     <input type="checkbox">
                     <span class="icon"></span>
                     <span class="text">Согласен с <a href="img/rabotut_policy.pdf" target="_blank">условиями</a> использования персональных данных</span>
                 </label>
-                <button class="btn btn-default _huge">ОТКЛИКНУТЬСЯ</button>
+                <button class="btn btn-default _huge">Отправить</button>
             </div>
-            <div class="job__right">
-                <h4 class="modal-title">Что дальше?</h4>
-                <ul class="job__list">
-                    <li>
-                        <span class="icon"><img src="img/svg/icon-j1.svg"></span>
-                        Наш менеджер перезванивает <br>и назначает дату интервью
-                    </li>
-                    <li>
-                        <span class="icon"><img src="img/svg/icon-j2.svg"></span>
-                        После интервью мы подбираем подходящую вам вакансию с удобным для графиком
-                    </li>
-                    <li>
-                        <span class="icon"><img src="img/icon-j3.png"></span>
-                        Вы выходите на работу рядом с домом и зарабатываете бабки!
-                    </li>
-                </ul>
+        </div>
+    </div>
+</div>
+}
+@@if(context.no_vacancy == "true") {
+<div class="modal fade job small" id="no_vacancy" role="dialog">
+    <div class="modal-dialog" >
+        <div class="modal-content">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Закрыть">
+                <svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
+            </button>
+            <div class="job__left full">
+                <h5 class="modal-title">Запрашиваемой Вами вакансии «Менеджер по рекламе» сейчас нет</h5>
+                <p>Оставьте свой e-mail и мы сообщим Вам как только вакансия появится</p>
+
+                <div class="form-group">
+                    <input type="text" class="form-control phone" placeholder="E-mail *">
+                </div>
+                <button class="btn btn-default _huge _full">Сообщите о появлении вакансии</button>
+                <div class="policy">
+                    <a href="img/rabotut_policy.pdf" target="_blank">Политика конфиденциальности</a>
+                </div>
             </div>
         </div>
     </div>

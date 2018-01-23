@@ -22,6 +22,9 @@
     height: 55px;
     line-height: 52px;
   }
+  &._full {
+    width: 100%;
+  }
   &-default {
     background: map_get($colors, btnDefault);
     border: 2px solid map_get($colors, btnDefault);
