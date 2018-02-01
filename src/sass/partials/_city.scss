@@ -92,14 +92,21 @@
     z-index: 9;
     padding: 20px 0;
     columns: 2;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 400px;
+    min-width: 400px;
+    @include flexbox();
+    @include flex-wrap(wrap);
     @include opacity(0);
     @include transition($transition);
     @include box-shadow($shadow);
 
     li {
+      width: 50%;
       cursor: pointer;
       padding: 7px 45px 7px 18px;
-      width: 100%;
 
       &.active,
       &:hover {
@@ -116,6 +123,13 @@
       }
       @media (max-width: $screen-md-max) {
         padding-left: 15px;
+      }
+    }
+    @media (max-width: $screen-xs-max) {
+      min-width: 0;
+
+      li {
+        width: 100%;
       }
     }
   }

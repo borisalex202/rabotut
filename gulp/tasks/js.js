@@ -10,9 +10,9 @@ var gulp        = require('gulp'),
  */
 
 gulp.task('js', [
+    'js-all',
     'js-internal',
-    'js-external',
-    'js-all'
+    'js-external'
 ]);
 
 gulp.task('js-all', config.wrapPipe(function(success, error) {
@@ -58,6 +58,6 @@ gulp.task('js-external', config.wrapPipe(function(success, error) {
             basepath: '@file',
             indent: true
         }).on('error', error))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(config.js.development.dest))
 }));

@@ -168,7 +168,7 @@ var ytPlayers = [];
     $('.sort-mobile__current').on('click', function () {
         $(this).closest('.sort-mobile').toggleClass('active');
     });
-    $('.sort-mobile ul li').on('click', function () {
+    /*$('.sort-mobile ul li').on('click', function () {
         var _this = $(this),
             _sortBlock = _this.closest('.sort-mobile'),
             _currentColor = _sortBlock.find('.color'),
@@ -177,12 +177,12 @@ var ytPlayers = [];
         _sortBlock.removeClass('active');
         _currentColor.css('background-color', _this.data('color'));
         _currentText.text(_this.text());
-    });
+    });*/
     $(document).mouseup(function (e){
-        var el = $('.sort-mobile ul');
+        var el = $('.sort-mobile');
         if (!el.is(e.target)
             && el.has(e.target).length === 0) {
-            $('.sort-mobile').removeClass('active');
+            el.removeClass('active');
         }
     });
 

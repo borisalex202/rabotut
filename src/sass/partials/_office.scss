@@ -54,6 +54,11 @@
       @include transition($transition);
       @include opacity(0);
 
+      @media (min-width: $screen-sm) {
+        max-height: 400px;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
       @media (max-width: $screen-xs-max) {
         min-width: 0;
         position: fixed;

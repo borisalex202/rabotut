@@ -430,6 +430,19 @@
           border-left: 0;
           position: relative;
 
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 11px;
+            background: #E6EFEE;
+          }
+          &._active {
+            color: #fff;
+            background: #7e8d8d !important;
+          }
           &._dark_blue {
             &:before {
               content: '';
@@ -481,14 +494,16 @@
             border-bottom: 1px solid #E7EFEF;
 
             &.active {
-              .sort-mobile__current {
-                &:before {
-                  @include rotate(-180deg);
+              .sort-mobile {
+                &__current {
+                  &:before {
+                    @include rotate(-180deg);
+                  }
                 }
-              }
-              ul {
-                pointer-events: all;
-                @include opacity(1);
+                &__list {
+                  pointer-events: all;
+                  @include opacity(1);
+                }
               }
             }
             &__current {
@@ -515,6 +530,17 @@
               width: 13px;
               height: 13px;
               margin-right: 12px;
+              background: #B6B6B6;
+
+              &._dark_blue {
+                background: #23548f;
+              }
+              &._blue {
+                background: #40bfe8;
+              }
+              &._red {
+                background: #e61849;
+              }
             }
             .text {
               display: inline-block;
@@ -523,7 +549,7 @@
               color: rgb(0, 0, 0);
               line-height: 1.2;
             }
-            ul {
+            &__list {
               position: absolute;
               top: 100%;
               left: 0;
@@ -535,10 +561,22 @@
               @include opacity(0);
               @include transition($transition);
 
-              li {
-                border-left: 5px solid;
-                padding: 5px 15px;
+              a {
+                color: #000;
+                display: block;
+                border-left: 5px solid #B6B6B6;
+                padding: 7px 15px;
                 cursor: pointer;
+
+                &._dark_blue {
+                  border-left-color: #083E7C
+                }
+                &._blue {
+                  border-left-color: #49BFE6
+                }
+                &._red {
+                  border-left-color: #E4204E
+                }
               }
             }
           }
