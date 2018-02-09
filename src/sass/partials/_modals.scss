@@ -4,11 +4,12 @@
   right: 0;
   bottom: 0;
   top: 0;
-  z-index: 1001;
   pointer-events: none;
-  background-color: rgba(#444545, .78);
+  //background-color: rgba(#444545, .78);
   overflow: auto;
   padding: 50px 0;
+  z-index: 1050;
+  padding-right: 0 !important;
   @include opacity(0);
   @include flexbox();
   @include flex-wrap(wrap);
@@ -45,6 +46,7 @@
     max-width: 870px;
     background-color: #fff;
     margin: auto;
+    transform: translate(0, 0) !important;
   }
   &-close {
     position: absolute;
@@ -88,10 +90,19 @@
     margin-bottom: 30px;
   }
   &-content {
+    border: 0;
+    @include box-shadow(none);
     @include flexbox();
     @include flex-wrap(wrap);
   }
   @media (max-width: 430px) {
     padding: 0;
+  }
+  &-backdrop {
+    background-color: rgba(#444545, .78);
+
+    &.in {
+      @include opacity(1);
+    }
   }
 }

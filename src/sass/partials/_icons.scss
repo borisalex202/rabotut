@@ -31,6 +31,10 @@
   &-logo {
     max-width: 187px;
     max-height: 47px;
+
+    @media (max-width: $screen-xs) {
+      max-width: 180px;
+    }
   }
   &-dropdown {
     max-width: 7px;

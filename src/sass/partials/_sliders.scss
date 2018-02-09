@@ -231,6 +231,13 @@
       margin-top: auto;
       margin-bottom: 15px;
 
+      @media (min-width: $screen-md) {
+        max-width: 650px;
+
+        br {
+          display: none;
+        }
+      }
       @media (max-width: $screen-md-max) {
         font-size: 50px;
       }
@@ -241,6 +248,7 @@
       }
     }
     &__description {
+      width: 100%;
       font-size: 25px;
       color: rgb(0, 0, 0);
       line-height: 1.5;

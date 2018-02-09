@@ -14,7 +14,7 @@ var path = {
         html: 'src/*.html',
         jsInternal: 'src/js/internal.js',
         jsExternal: 'src/js/external.js',
-        jsAll: 'src/js/*.js',
+        jsAll: ['src/js/*.js', '!src/js/external.js', '!src/js/internal.js'],
         jquery: 'bower_components/jquery/dist/*.*', // jquery делаем отдельно чтобы подключить его в head
         html5shiv: 'bower_components/html5shiv/dist/*.*', // html5shiv делаем отдельно чтобы подключить его в head
         styleInternal: 'src/sass/internal.scss',
@@ -30,7 +30,7 @@ var path = {
     },
     watch: {
         html: 'src/**/*.html',
-        jsAll: 'src/js/*.js',
+        jsAll: ['src/js/*.js', '!src/js/external.js', '!src/js/internal.js'],
         jsInternal: ['src/js/**/*.js', '!src/js/external.js'],
         jsExternal: 'src/js/external.js',
         styleInternal: ['src/sass/**/*.scss', '!src/sass/external.scss'],
