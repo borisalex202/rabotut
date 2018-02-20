@@ -1,6 +1,8 @@
 $(window).on('load', function () {
     $('.js-slider-main').slick({
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
         prevArrow: options.prevArrow,
         nextArrow: options.nextArrow,
         responsive: [

@@ -103,7 +103,7 @@
         position: absolute;
         top: calc(50% + 22px);
         right: -35px;
-        min-width: 470px;
+        width: 470px;
         min-height: 241px;
         padding: 58px 45px 50px 140px;
         color: #fff;
@@ -140,9 +140,11 @@
           font-size: 17px;
           line-height: 1.2;
           font-weight: 300;
+          max-width: 95%;
 
           @media (max-width: $screen-xs-max) {
             margin-bottom: 10px;
+            max-width: 90%;
           }
         }
         .tel {
